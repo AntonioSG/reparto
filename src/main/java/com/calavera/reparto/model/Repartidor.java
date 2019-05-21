@@ -6,11 +6,11 @@
 package com.calavera.reparto.model;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 /**
  *
@@ -22,6 +22,7 @@ public class Repartidor implements Serializable {
     private Long id;
     private String nombre;
     private String apellidos;
+    @Column(nullable = false,unique = true)
     private String dni;
     private double latitud;
     private double longitud;
