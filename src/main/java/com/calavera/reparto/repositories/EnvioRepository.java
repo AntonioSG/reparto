@@ -10,16 +10,17 @@ package com.calavera.reparto.repositories;
  * @author Antonio
  */
 
-import com.calavera.reparto.model.Cliente;
+import com.calavera.reparto.model.Envio;
 import java.util.List;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "cliente", path = "cliente")
-public interface ClienteRepository extends PagingAndSortingRepository<Cliente, Long> {
+@RepositoryRestResource(collectionResourceRel = "envio", path = "envio")
+public interface EnvioRepository extends PagingAndSortingRepository<Envio, Long> {
 
-    List<Cliente> findByDni(@Param("dni") String dni);
+//    List<Envio> findByDni(@Param("dni") String dni);
+//    Envio findNearest(@Param ("latitud") Double latitud,@Param ("longitud")Double longitud);
 
 }
